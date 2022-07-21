@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    --bg: #FFFFFF;
+    --bg-panel: #FFFFFF;
+    --color-headings: #0065FF;
+    --color-text: #333333;
+    --color-sheck: #F8F9FA;
+    --color-burguer: #FFFFFF;
+}
+
+.widht {
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #202020;
+    box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    background-color: var(--bg-panel);
+}
+
+.left-container {
+    display: flex;
+    padding-top: 30px;
+    gap: 50px;
+    font-weight: 700;
+}
+
+.section {
+    display: flex;
+    gap: 20px;
+    font-weight: 400;
+}
+
+a {
+    color: var(--color-headings);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.right-container {
+    display: flex;
+    gap: 50px;
+    padding: 30px 0px 30px;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+.dark-container {
+    display: flex;
+    font-size: 14px;
+    line-height: 20px;
+    align-items: center;
+}
+
+input [type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background-color: #E5E5E5;
+    border: 1px solid #3C3B3A;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: #3C3B3A;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked+label {
+    background-color: var(--color-text);
+}
+
+input:checked+label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active::after {
+    width: 45px;
+}
+
+h5 {
+    font-weight: 400 !important;
+    color: var(--color-text)
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    transition: 0.2s;
+    background-color: var(--bg);
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+h1 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 100%;
+    color: var(--color-headings);
+}
+
+p {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 400px;
+    color: var(--color-text)
+}
+
+span {
+    color: var(--color-headings);
+}
+
+.check-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-sheck);
+    border-radius: 10px;
+    justify-content: flex-start;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 400;
+    border-radius: 10px;
+    justify-content: flex-start;
+    width: max-content;
+}
+
+h6 {
+    color: var(--color-text)
+}
+
+.linha-menor {
+    height: 0.5px;
+    width: 20%;
+    background-color: var(--color-headings);
+    display: flex;
+}
+
+.linha-maior {
+    height: 0.5px;
+    width: 100%;
+    background-color: var(--color-headings);
+    display: flex;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-one-container {
+    display: flex;
+    gap: 30px;
+}
+
+.welovedogs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-two-container {
+    display: flex;
+    padding-bottom: 80px;
+    gap: 30px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#button-project {
+    padding: 16px 30px;
+    border-radius: 45px;
+    border: 1px solid var(--color-headings);
+    color: var(--color-headings);
+    background-color: var(--bg-panel);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    width: max-content;
+}
+
+h4 {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 700;
+    color: var(--color-text)
+}
+
+h2 {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 700;
+    color: var(--color-headings);
+}
+
+#burguer {
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.btn-mobile {
+    cursor: pointer;
+    background-color: var(--bg);
+    color: #E5E5E5;
+}
+
+#switch {
+    display: none;
+}
+
+@media (max-width: 875px) {
+    .body-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .project-one-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: none;
+    }
+    .welovedogs-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-two-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+    }
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 797px) {
+    body {
+        position: absolute;
+    }
+    h1 {
+        font-family: 'EB Garamond', serif;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 100%;
+        text-align: center;
+    }
+    p {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400px;
+        font-size: 16px;
+    }
+    #burguer {
+        display: block;
+        margin-right: 90%;
+    }
+    .section {
+        display: none;
+    }
+    .social {
+        display: none;
+    }
+    #button-project {
+        padding: none;
+    }
+}
+
+@media (max-width: 513px) {
+    .left-container {
+        padding: none;
+    }
+    .text {
+        display: flex;
+        text-align: justify;
+    }
+    .check-container {
+        width: 90%;
+    }
+}
